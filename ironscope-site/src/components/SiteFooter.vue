@@ -30,6 +30,15 @@ const columns = [
       { label: 'Service Agreement', href: '/agreement' },
     ],
   },
+  {
+    head: 'Company',
+    links: [
+      { label: 'About', href: '/about', route: true },
+      { label: 'Requirements', href: '/requirements', route: true },
+      { label: 'FAQ', href: '/faq', route: true },
+      { label: 'Contact', href: '/contact', route: true },
+    ],
+  },
 ]
 </script>
 
@@ -37,7 +46,7 @@ const columns = [
   <footer class="mt-auto border-t border-hairline bg-carbon text-on-dark">
     <div class="shell py-16">
       <div class="grid gap-12 md:grid-cols-12">
-        <div class="md:col-span-12 lg:col-span-3">
+        <div class="md:col-span-12 lg:col-span-4">
           <div class="flex items-start gap-4">
             <SealMark :size="56" class="text-on-dark" />
             <div>
@@ -55,7 +64,7 @@ const columns = [
         <nav
           v-for="col in columns"
           :key="col.head"
-          class="md:col-span-4 lg:col-span-3"
+          class="md:col-span-6 lg:col-span-2"
           :aria-label="col.head"
         >
           <h2 class="label text-on-dark-muted">{{ col.head }}</h2>
