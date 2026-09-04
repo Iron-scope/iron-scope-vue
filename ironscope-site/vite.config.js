@@ -139,13 +139,28 @@ export default defineConfig({
     port: 4173,
     strictPort: true,
     host: true,
-    allowedHosts: ['remote.eterminals.com'],
+    allowedHosts: ['remote.eterminals.com', 'localhost'],
     https,
+    /**
+     * Backend migration plan (Phase 0): the API stays on the existing
+     * Next.js app (mitigation-platform), running separately on :3000 in
+     * dev. Proxying /api/* here means fetch("/api/...") calls in this app
+     * are same-origin from the browser's point of view, so the NextAuth
+     * session cookie behaves exactly like it does in the current site —
+     * no CORS config, no cross-origin cookie handling needed either now
+     * or after a same-origin production cutover.
+     */
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      },
+    },
   },
   preview: {
     port: 4273,
     strictPort: true,
-    allowedHosts: ['remote.eterminals.com'],
+    allowedHosts: ['remote.eterminals.com', 'localhost'],
     https,
   },
 })

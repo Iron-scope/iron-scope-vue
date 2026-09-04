@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import { sessionGuard } from './guards'
 
 /**
  * Home is eager (first paint on nearly every session); everything else is a
@@ -49,6 +50,8 @@ const router = createRouter({
     return { top: 0 }
   },
 })
+
+router.beforeEach(sessionGuard)
 
 router.afterEach((to) => {
   const t = to.meta?.title
