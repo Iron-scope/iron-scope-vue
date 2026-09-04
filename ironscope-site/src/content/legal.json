@@ -1,0 +1,401 @@
+{
+  "terms": {
+    "slug": "terms",
+    "title": "Terms & Conditions",
+    "navTitle": "Terms & Conditions",
+    "eyebrow": null,
+    "updated": "Last updated: July 2026",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "These Terms & Conditions (\"Terms\") govern access to and use of the Iron Scope website and platform (the \"Site\"), operated by Iron Scope LLC (\"Iron Scope,\" \"we,\" \"us\"). By accessing or using the Site, you agree to these Terms. If you do not agree, do not use the Site."
+      },
+      {
+        "type": "h2",
+        "text": "1. Eligibility"
+      },
+      {
+        "type": "p",
+        "text": "The Site is intended for use by restoration and mitigation contractors, mitigation companies, and related businesses acting in a professional capacity. By creating an account, you represent that you are authorized to act on behalf of the business you register."
+      },
+      {
+        "type": "h2",
+        "text": "2. Accounts"
+      },
+      {
+        "type": "p",
+        "text": "You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. Notify us promptly of any unauthorized use of your account."
+      },
+      {
+        "type": "h2",
+        "text": "3. Acceptable Use"
+      },
+      {
+        "type": "p",
+        "text": "You agree not to:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Submit false, misleading, or fraudulent claim information",
+          "Share account access with unauthorized users",
+          "Attempt to interfere with, disrupt, or gain unauthorized access to the Site or its underlying systems",
+          "Use the Site for any purpose that violates applicable law",
+          "Scrape, reverse engineer, or resell access to the Site without written permission"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "4. Third-Party Services"
+      },
+      {
+        "type": "p",
+        "text": "The Site integrates with third-party services, including payment processing (Stripe) and workflow management (Monday.com). We are not responsible for the availability, content, or practices of third-party services. Documentation links you submit (Google Drive, OneDrive, Dropbox, or similar) remain subject to the sharing settings and terms of those third-party platforms."
+      },
+      {
+        "type": "h2",
+        "text": "5. Intellectual Property"
+      },
+      {
+        "type": "p",
+        "text": "All content on the Site, including text, graphics, logos, and the underlying platform, is the property of Iron Scope LLC or its licensors and is protected by applicable intellectual property laws. Nothing in these Terms grants you any right to use Iron Scope's trademarks or branding without prior written consent."
+      },
+      {
+        "type": "h2",
+        "text": "6. Disclaimers"
+      },
+      {
+        "type": "p",
+        "text": "The Site is provided \"as is\" and \"as available\" without warranties of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the Site will be uninterrupted, secure, or error-free."
+      },
+      {
+        "type": "h2",
+        "text": "7. Limitation of Liability"
+      },
+      {
+        "type": "p",
+        "text": "To the fullest extent permitted by law, Iron Scope shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Site."
+      },
+      {
+        "type": "h2",
+        "text": "8. Changes to These Terms"
+      },
+      {
+        "type": "p",
+        "text": "We may update these Terms from time to time. Continued use of the Site after changes take effect constitutes acceptance of the revised Terms."
+      },
+      {
+        "type": "h2",
+        "text": "9. Governing Law"
+      },
+      {
+        "type": "p",
+        "text": "These Terms are governed by the laws of the State of Oregon, without regard to conflict of law principles."
+      },
+      {
+        "type": "h2",
+        "text": "10. Contact"
+      },
+      {
+        "type": "p",
+        "text": "Questions about these Terms can be directed to Iron Scope LLC."
+      }
+    ]
+  },
+  "eula": {
+    "slug": "eula",
+    "title": "End User License Agreement",
+    "navTitle": "End User License Agreement",
+    "eyebrow": null,
+    "updated": "Last updated: July 2026",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "This End User License Agreement (\"EULA\") governs your use of the Iron Scope platform (the \"Platform\"), a software application owned and operated by Iron Scope LLC (\"Iron Scope,\" \"we,\" \"us\"). By creating an account or using the Platform, you agree to this EULA."
+      },
+      {
+        "type": "h2",
+        "text": "1. License Grant"
+      },
+      {
+        "type": "p",
+        "text": "Subject to your compliance with this EULA and any applicable subscription terms, Iron Scope grants you a limited, non-exclusive, non-transferable, revocable license to access and use the Platform for your internal business purposes, specifically to submit and track Xactimate estimate requests."
+      },
+      {
+        "type": "h2",
+        "text": "2. Restrictions"
+      },
+      {
+        "type": "p",
+        "text": "You agree not to:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Copy, modify, or create derivative works of the Platform",
+          "Reverse engineer, decompile, or disassemble the Platform",
+          "Sell, sublicense, rent, lease, or otherwise transfer access to the Platform to any third party",
+          "Use the Platform to build a competing product or service",
+          "Circumvent any access controls or usage limitations built into the Platform"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "3. Ownership"
+      },
+      {
+        "type": "p",
+        "text": "The Platform, including all software, design, and underlying technology, is and remains the exclusive property of Iron Scope LLC. This EULA does not transfer any ownership rights to you. All rights not expressly granted are reserved by Iron Scope."
+      },
+      {
+        "type": "h2",
+        "text": "4. Your Data"
+      },
+      {
+        "type": "p",
+        "text": "You retain ownership of the data and documentation you submit through the Platform (loss details, photos, claim information, and similar materials). You grant Iron Scope a limited license to use that data solely to provide the services you request."
+      },
+      {
+        "type": "h2",
+        "text": "5. Account Restrictions"
+      },
+      {
+        "type": "p",
+        "text": "Access to the Platform is limited to one account per registered business unless otherwise agreed in writing. Account credentials may not be shared across multiple users or companies."
+      },
+      {
+        "type": "h2",
+        "text": "6. Updates and Modifications"
+      },
+      {
+        "type": "p",
+        "text": "Iron Scope may update, modify, or discontinue features of the Platform at any time. We will make reasonable efforts to notify active subscribers of material changes that affect core functionality."
+      },
+      {
+        "type": "h2",
+        "text": "7. Termination"
+      },
+      {
+        "type": "p",
+        "text": "This license terminates automatically if you breach any term of this EULA. Iron Scope may also suspend or terminate access to the Platform for non-payment, abuse, or violation of our Terms & Conditions or Service Agreement. Upon termination, your right to use the Platform ends immediately."
+      },
+      {
+        "type": "h2",
+        "text": "8. Disclaimer of Warranties"
+      },
+      {
+        "type": "p",
+        "text": "The Platform is provided \"as is,\" without warranty of any kind, express or implied, to the fullest extent permitted by law."
+      },
+      {
+        "type": "h2",
+        "text": "9. Limitation of Liability"
+      },
+      {
+        "type": "p",
+        "text": "Iron Scope's total liability under this EULA shall not exceed the amount you paid for access to the Platform in the six (6) months preceding the event giving rise to the claim."
+      },
+      {
+        "type": "h2",
+        "text": "10. Governing Law"
+      },
+      {
+        "type": "p",
+        "text": "This EULA is governed by the laws of the State of Oregon, without regard to conflict of law principles."
+      },
+      {
+        "type": "h2",
+        "text": "11. Contact"
+      },
+      {
+        "type": "p",
+        "text": "Questions about this EULA can be directed to Iron Scope LLC."
+      }
+    ]
+  },
+  "agreement": {
+    "slug": "agreement",
+    "title": "Service Agreement",
+    "navTitle": "Service Agreement",
+    "eyebrow": null,
+    "updated": "Last updated: August 2026",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "This Service Agreement (\"Agreement\") is entered into between Iron Scope LLC, an Oregon limited liability company (\"Iron Scope,\" \"we,\" \"us\"), and the restoration or mitigation company creating an account (\"Client,\" \"you\"). By checking the acceptance box during account registration, you agree to be bound by this Agreement."
+      },
+      {
+        "type": "h2",
+        "text": "1. Definitions"
+      },
+      {
+        "type": "p",
+        "text": "\"Client\" means the restoration or mitigation contracting business that registers an account and engages Iron Scope's services — not any homeowner, property owner, or other insured party. \"Policyholder\" means the owner of the property for which Client is performing restoration or mitigation work and who holds the applicable insurance policy. \"Carrier\" means the insurance company, third-party administrator (TPA), or adjuster handling a Policyholder's claim. \"Estimate\" means the Xactimate scope, ESX file, and supporting documentation Iron Scope prepares under this Agreement."
+      },
+      {
+        "type": "h2",
+        "text": "2. Nature of the Relationship — Not a Public Adjuster"
+      },
+      {
+        "type": "p",
+        "text": "Iron Scope is retained exclusively by Client, a licensed restoration or mitigation contractor, to prepare Estimates. Iron Scope's client relationship is with Client only — Iron Scope does not represent, act on behalf of, or owe any duty to any Policyholder. Iron Scope is not a licensed public adjuster in any jurisdiction and does not perform public adjusting services. Iron Scope does not negotiate, settle, or communicate directly with any Carrier on behalf of Client or any Policyholder regarding the value or settlement of an insurance claim. All communication and negotiation with Carriers regarding a claim is conducted solely by Client, in Client's own name and capacity as the contractor of record. Where Iron Scope's Ironclad tier provides rebuttal or dispute documentation, that documentation is prepared for Client's own use in communications Client conducts directly — Iron Scope does not present, deliver, or advocate that documentation to any Carrier itself."
+      },
+      {
+        "type": "h2",
+        "text": "3. Client's Retained Authority and Responsibility"
+      },
+      {
+        "type": "p",
+        "text": "Client retains full and exclusive authority over every Estimate Iron Scope prepares. Client is solely responsible for reviewing, approving, and submitting each Estimate to the applicable Carrier, and for all representations made to any Carrier or Policyholder in connection with that submission. Iron Scope's role is limited to preparing the Estimate and related documentation at Client's request; Iron Scope has no authority to bind Client, submit an Estimate on Client's behalf, or make representations to any third party regarding a claim."
+      },
+      {
+        "type": "h2",
+        "text": "4. Services"
+      },
+      {
+        "type": "p",
+        "text": "Iron Scope provides independent Xactimate estimate writing and related documentation services for restoration and mitigation contractors, including scope review and verification, insurance-compliant line item documentation, building code and manufacturer research, estimate revisions, supplement preparation, and delivery of a completed ESX file. Our optional Ironclad tier additionally provides guaranteed turnaround times and rebuttal/dispute documentation for Client's own use, as described on our Pricing page and subject to the limitations in Section 2 above."
+      },
+      {
+        "type": "h2",
+        "text": "5. Fees, Deposits, and Payment"
+      },
+      {
+        "type": "p",
+        "text": "Client agrees to pay the estimate writing fee and deposit amounts published on our Pricing page, as may be updated from time to time. A deposit is due at the time a request is submitted and is processed through our third-party payment processor (Stripe). Deposits are non-refundable once work has begun on the associated Estimate, except as required by applicable law. The estimate writing fee is calculated as a percentage of the Carrier-approved Replacement Cost Value (RCV), or the published minimum, whichever is greater, as set out in our current fee schedule. For requests with an estimated RCV of $10,000 or less, the full published minimum fee is collected upfront at submission as the deposit, with no additional amount billed later for that request. For requests above that threshold, the deposit is a portion of the total fee, with the remainder due based on the final Carrier-approved RCV. Ironclad, where purchased, is billed separately as a recurring subscription and is not required for base access to Iron Scope's services."
+      },
+      {
+        "type": "p",
+        "text": "Iron Scope may offer a limited number of complimentary Estimates to new Client accounts, as described on our Pricing page (\"Free Estimates\"). Free Estimates include the Estimate itself only. Revisions, supplement preparation, and other services described in Section 4 are not guaranteed on Free Estimates and are provided, if at all, at Iron Scope's sole discretion. Client may request to upgrade a Free Estimate to Ironclad-level support after submission if a Carrier disputes the Estimate; doing so obligates Client to pay the standard estimate writing fee, calculated from the final Carrier-approved RCV, with no deposit required for that specific request."
+      },
+      {
+        "type": "h2",
+        "text": "6. Accurate Reporting of Approved Value"
+      },
+      {
+        "type": "p",
+        "text": "Client agrees to promptly and accurately disclose to Iron Scope the final Carrier-approved RCV for any Estimate Iron Scope prepared, including supporting documentation (approval letter, Estimate of Record, or approved summary) sufficient to verify that value. Iron Scope reserves the right to audit approved claim outcomes and to pursue amounts owed, including through collection or legal action, where Client fails to disclose or misrepresents an approved value."
+      },
+      {
+        "type": "h2",
+        "text": "7. Client Responsibilities"
+      },
+      {
+        "type": "p",
+        "text": "Client is responsible for providing complete and accurate loss documentation, including photographs, moisture readings, 3D scans, and claim information, as described on our Requirements page. Client represents and warrants that it holds all contractor licenses and insurance required to operate in its jurisdiction, and that Client — not Iron Scope — is solely responsible for determining and complying with any licensing requirements applicable to Client's own communications and negotiations with Carriers, including any public adjuster licensing laws that may apply to Client's conduct. Timelines and SLA commitments, where applicable, run from the point Iron Scope has received complete information — not from the date of initial submission if information is incomplete."
+      },
+      {
+        "type": "h2",
+        "text": "8. No Guarantee of Claim Outcome"
+      },
+      {
+        "type": "p",
+        "text": "Estimates prepared by Iron Scope reflect our professional assessment based on the information and documentation provided. Iron Scope does not guarantee that any Carrier will approve an Estimate, in whole or in part, or that a specific RCV will be achieved. Ironclad's SLA guarantees apply only to turnaround time commitments as published, not to claim outcomes or negotiation results, since Iron Scope does not conduct negotiations."
+      },
+      {
+        "type": "h2",
+        "text": "9. Independent Contractor Relationship"
+      },
+      {
+        "type": "p",
+        "text": "Iron Scope acts as an independent contractor in providing services under this Agreement. Nothing in this Agreement creates an employment, partnership, joint venture, or agency relationship between the parties, and neither party has authority to bind the other. Iron Scope is not Client's agent, representative, or fiduciary, and is not the agent or representative of any Policyholder."
+      },
+      {
+        "type": "h2",
+        "text": "10. Confidentiality"
+      },
+      {
+        "type": "p",
+        "text": "Each party agrees to keep confidential any non-public information disclosed by the other party in connection with this Agreement, including claim details, pricing, and business information, and to use such information solely to perform its obligations under this Agreement. This obligation survives termination of this Agreement."
+      },
+      {
+        "type": "h2",
+        "text": "11. Intellectual Property"
+      },
+      {
+        "type": "p",
+        "text": "Upon full payment, Client owns the specific Estimate and ESX file delivered for that request. Iron Scope retains all rights in its own methodologies, templates, standard rebuttal language, software, and any other materials not specific to a single delivered Estimate. Nothing in this Agreement transfers rights in Iron Scope's underlying tools or business processes to Client."
+      },
+      {
+        "type": "h2",
+        "text": "12. Indemnification"
+      },
+      {
+        "type": "p",
+        "text": "Client agrees to indemnify, defend, and hold harmless Iron Scope from any claim, loss, liability, or expense (including reasonable attorneys' fees) arising out of: (a) Client's communications, representations, or negotiations with any Carrier or Policyholder; (b) Client's submission or use of an Estimate; or (c) Client's breach of Section 2, 3, or 7 of this Agreement, including any failure by Client to obtain or maintain licensing applicable to Client's own conduct. Iron Scope agrees to indemnify Client for direct damages arising from Iron Scope's gross negligence or willful misconduct in preparing an Estimate, subject to the limitation of liability in Section 13."
+      },
+      {
+        "type": "h2",
+        "text": "13. Limitation of Liability"
+      },
+      {
+        "type": "p",
+        "text": "To the fullest extent permitted by law, Iron Scope's total liability arising out of or related to this Agreement shall not exceed the total fees paid by Client to Iron Scope in the six (6) months preceding the claim giving rise to liability. Iron Scope shall not be liable for indirect, incidental, special, or consequential damages, including lost profits, arising from or related to this Agreement, or for any outcome of Client's communications or negotiations with a Carrier or Policyholder."
+      },
+      {
+        "type": "h2",
+        "text": "14. Representations and Warranties"
+      },
+      {
+        "type": "p",
+        "text": "Each party represents that it has the authority to enter into this Agreement and will comply with applicable law in performing its obligations. Client further represents that it will not describe, hold out, or represent Iron Scope as a licensed public adjuster, claims negotiator, or representative of any Policyholder in any communication with a Carrier, Policyholder, or regulator."
+      },
+      {
+        "type": "h2",
+        "text": "15. Term and Termination"
+      },
+      {
+        "type": "p",
+        "text": "This Agreement remains in effect for as long as Client maintains an account or submits requests through the Iron Scope platform. Either party may terminate at any time; termination does not relieve Client of payment obligations for services already rendered. Iron Scope may suspend or terminate Client's account immediately if Client misrepresents Iron Scope's role to a Carrier, Policyholder, or regulator, or otherwise breaches Section 2, 3, or 14."
+      },
+      {
+        "type": "h2",
+        "text": "16. Force Majeure"
+      },
+      {
+        "type": "p",
+        "text": "Neither party is liable for delay or failure to perform caused by events beyond its reasonable control, including natural disaster, act of government, or widespread service outage, provided the affected party makes reasonable efforts to resume performance."
+      },
+      {
+        "type": "h2",
+        "text": "17. Assignment"
+      },
+      {
+        "type": "p",
+        "text": "Client may not assign this Agreement without Iron Scope's prior written consent. Iron Scope may assign this Agreement in connection with a merger, acquisition, or sale of substantially all its assets."
+      },
+      {
+        "type": "h2",
+        "text": "18. Governing Law and Dispute Resolution"
+      },
+      {
+        "type": "p",
+        "text": "This Agreement is governed by the laws of the State of Oregon, without regard to its conflict of law principles. The parties agree to attempt to resolve any dispute informally before initiating litigation. Any dispute not resolved informally shall be subject to the exclusive jurisdiction of the state and federal courts located in Oregon."
+      },
+      {
+        "type": "h2",
+        "text": "19. Severability"
+      },
+      {
+        "type": "p",
+        "text": "If any provision of this Agreement is found unenforceable, the remaining provisions remain in full effect, and the unenforceable provision will be interpreted to reflect the parties' original intent as closely as permitted by law."
+      },
+      {
+        "type": "h2",
+        "text": "20. Entire Agreement"
+      },
+      {
+        "type": "p",
+        "text": "This Agreement, together with our Terms & Conditions and EULA, constitutes the entire agreement between the parties regarding its subject matter and supersedes any prior agreements, whether written or oral. Iron Scope may update this Agreement from time to time; continued use of the platform after an update constitutes acceptance of the revised terms."
+      },
+      {
+        "type": "h2",
+        "text": "21. Contact"
+      },
+      {
+        "type": "p",
+        "text": "Questions about this Agreement can be directed to Iron Scope LLC."
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /queue
+Disallow: /admin
+Disallow: /api/
+
+Sitemap: https://iron-scope.com/sitemap.xml
