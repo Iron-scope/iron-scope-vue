@@ -10,7 +10,7 @@ const columns = [
       { label: 'Scope of Work', href: '/#scope' },
       { label: 'Large Loss — $100K+', href: '/#large-loss' },
       { label: 'Supplements & Revisions', href: '/#scope' },
-      { label: 'What We Need From You', href: '/#intake' },
+      { label: 'What We Need From You', href: '/#scope' },
     ],
   },
   {

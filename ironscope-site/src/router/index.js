@@ -34,6 +34,24 @@ const routes = [
   // The old site used /signup; keep the URL alive rather than 404 it.
   { path: '/signup', redirect: { name: 'register' } },
   {
+    path: '/terms',
+    name: 'terms',
+    component: () => import('@/views/LegalView.vue'),
+    meta: { title: 'Terms & Conditions', legalSlug: 'terms' },
+  },
+  {
+    path: '/eula',
+    name: 'eula',
+    component: () => import('@/views/LegalView.vue'),
+    meta: { title: 'EULA', legalSlug: 'eula' },
+  },
+  {
+    path: '/agreement',
+    name: 'agreement',
+    component: () => import('@/views/LegalView.vue'),
+    meta: { title: 'Service Agreement', legalSlug: 'agreement' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('@/views/NotFoundView.vue'),

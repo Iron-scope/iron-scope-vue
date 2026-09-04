@@ -258,7 +258,19 @@
       },
       {
         "type": "h2",
-        "text": "5. Fees, Deposits, and Payment"
+        "text": "5. Site Visits"
+      },
+      {
+        "type": "p",
+        "text": "From time to time, and only where agreed in advance with Client, Iron Scope personnel may conduct an on-site visit to a property for purposes of scope verification, measurement, or documentation. Site visits are conducted at Client's request and with Client's confirmation that Iron Scope has authorization to access the property from the Policyholder or property owner; Client is responsible for obtaining that authorization before any visit is scheduled. Iron Scope personnel conducting a site visit do not perform restoration, mitigation, remediation, or repair work, and are not acting as a contractor, subcontractor, or general contractor for the project. Iron Scope is not responsible for the condition of the property, including any pre-existing damage, defect, or hazard not caused by Iron Scope's own conduct during the visit, and Client remains solely responsible for site safety and conditions. Iron Scope maintains commercial general liability insurance covering its site-visit activities and will provide a certificate of insurance upon Client's reasonable request."
+      },
+      {
+        "type": "p",
+        "text": "Client must disclose to Iron Scope, before a site visit is scheduled, any known hazardous condition at the property, including biohazard, trauma-scene, structural instability, or contamination conditions consistent with IICRC S540 or comparable standards. Iron Scope may decline or reschedule a visit where a disclosed or discovered hazard exceeds what its personnel are equipped to safely address. Client is solely responsible for obtaining the Policyholder's consent to Iron Scope's access to the property and to any photographs, video, or other documentation Iron Scope captures during the visit, and for communicating any site-specific rules or restrictions to Iron Scope in advance."
+      },
+      {
+        "type": "h2",
+        "text": "6. Fees, Deposits, and Payment"
       },
       {
         "type": "p",
@@ -270,7 +282,7 @@
       },
       {
         "type": "h2",
-        "text": "6. Accurate Reporting of Approved Value"
+        "text": "7. Accurate Reporting of Approved Value"
       },
       {
         "type": "p",
@@ -278,15 +290,15 @@
       },
       {
         "type": "h2",
-        "text": "7. Client Responsibilities"
+        "text": "8. Client Responsibilities"
       },
       {
         "type": "p",
-        "text": "Client is responsible for providing complete and accurate loss documentation, including photographs, moisture readings, 3D scans, and claim information, as described on our Requirements page. Client represents and warrants that it holds all contractor licenses and insurance required to operate in its jurisdiction, and that Client — not Iron Scope — is solely responsible for determining and complying with any licensing requirements applicable to Client's own communications and negotiations with Carriers, including any public adjuster licensing laws that may apply to Client's conduct. Timelines and SLA commitments, where applicable, run from the point Iron Scope has received complete information — not from the date of initial submission if information is incomplete."
+        "text": "Client is responsible for providing complete and accurate loss documentation, including photographs, moisture readings, 3D scans, and claim information, as described on our Requirements page. Client represents and warrants that it holds all contractor licenses and insurance required to operate in its jurisdiction, and that Client — not Iron Scope — is solely responsible for determining and complying with any licensing requirements applicable to Client's own communications and negotiations with Carriers, including any public adjuster licensing laws that may apply to Client's conduct. Where Iron Scope conducts a site visit under Section 5, Client is responsible for ensuring safe site conditions and for obtaining any access authorization required. Timelines and SLA commitments, where applicable, run from the point Iron Scope has received complete information — not from the date of initial submission if information is incomplete."
       },
       {
         "type": "h2",
-        "text": "8. No Guarantee of Claim Outcome"
+        "text": "9. No Guarantee of Claim Outcome"
       },
       {
         "type": "p",
@@ -294,7 +306,7 @@
       },
       {
         "type": "h2",
-        "text": "9. Independent Contractor Relationship"
+        "text": "10. Independent Contractor Relationship"
       },
       {
         "type": "p",
@@ -302,7 +314,7 @@
       },
       {
         "type": "h2",
-        "text": "10. Confidentiality"
+        "text": "11. Confidentiality"
       },
       {
         "type": "p",
@@ -310,7 +322,7 @@
       },
       {
         "type": "h2",
-        "text": "11. Intellectual Property"
+        "text": "12. Intellectual Property"
       },
       {
         "type": "p",
@@ -318,23 +330,27 @@
       },
       {
         "type": "h2",
-        "text": "12. Indemnification"
+        "text": "13. Indemnification"
       },
       {
         "type": "p",
-        "text": "Client agrees to indemnify, defend, and hold harmless Iron Scope from any claim, loss, liability, or expense (including reasonable attorneys' fees) arising out of: (a) Client's communications, representations, or negotiations with any Carrier or Policyholder; (b) Client's submission or use of an Estimate; or (c) Client's breach of Section 2, 3, or 7 of this Agreement, including any failure by Client to obtain or maintain licensing applicable to Client's own conduct. Iron Scope agrees to indemnify Client for direct damages arising from Iron Scope's gross negligence or willful misconduct in preparing an Estimate, subject to the limitation of liability in Section 13."
-      },
-      {
-        "type": "h2",
-        "text": "13. Limitation of Liability"
+        "text": "Client agrees to indemnify, defend, and hold harmless Iron Scope from any claim, loss, liability, or expense (including reasonable attorneys' fees) arising out of: (a) Client's communications, representations, or negotiations with any Carrier or Policyholder; (b) Client's submission or use of an Estimate; or (c) Client's breach of Section 2, 3, or 8 of this Agreement, including any failure by Client to obtain or maintain licensing applicable to Client's own conduct. Iron Scope agrees to indemnify Client for direct damages arising from Iron Scope's gross negligence or willful misconduct in preparing an Estimate, subject to the limitation of liability in Section 14."
       },
       {
         "type": "p",
-        "text": "To the fullest extent permitted by law, Iron Scope's total liability arising out of or related to this Agreement shall not exceed the total fees paid by Client to Iron Scope in the six (6) months preceding the claim giving rise to liability. Iron Scope shall not be liable for indirect, incidental, special, or consequential damages, including lost profits, arising from or related to this Agreement, or for any outcome of Client's communications or negotiations with a Carrier or Policyholder."
+        "text": "With respect to site visits under Section 5, Iron Scope shall be responsible for, and shall indemnify Client against, direct property damage or personal injury to Client's personnel proximately caused by the negligent acts or omissions of Iron Scope's personnel while physically present at the property, subject to the limitation of liability in Section 14. Iron Scope is not responsible for, and Client agrees to indemnify Iron Scope against, any claim arising from a pre-existing condition of the property, any conduct of Client, the Policyholder, or any other person present at the site, or Client's failure to obtain proper authorization for the visit or to disclose a known hazardous condition, in each case as required under Section 5. Nothing in this Agreement requires either party to indemnify the other for that party's own negligence or willful misconduct to the extent such indemnification is prohibited by applicable law, and any provision of this Agreement shall be interpreted and enforced to the maximum extent permitted under such law."
       },
       {
         "type": "h2",
-        "text": "14. Representations and Warranties"
+        "text": "14. Limitation of Liability"
+      },
+      {
+        "type": "p",
+        "text": "To the fullest extent permitted by law, Iron Scope's total liability arising out of or related to this Agreement shall not exceed the total fees paid by Client to Iron Scope in the six (6) months preceding the claim giving rise to liability. Iron Scope shall not be liable for indirect, incidental, special, or consequential damages, including lost profits, arising from or related to this Agreement, or for any outcome of Client's communications or negotiations with a Carrier or Policyholder. The limitation in this Section applies to claims arising from site visits under Section 5 to the same extent as any other claim under this Agreement, except that it shall not limit either party's liability for gross negligence, willful misconduct, or bodily injury to the extent such limitation is prohibited by applicable law."
+      },
+      {
+        "type": "h2",
+        "text": "15. Representations and Warranties"
       },
       {
         "type": "p",
@@ -342,15 +358,15 @@
       },
       {
         "type": "h2",
-        "text": "15. Term and Termination"
+        "text": "16. Term and Termination"
       },
       {
         "type": "p",
-        "text": "This Agreement remains in effect for as long as Client maintains an account or submits requests through the Iron Scope platform. Either party may terminate at any time; termination does not relieve Client of payment obligations for services already rendered. Iron Scope may suspend or terminate Client's account immediately if Client misrepresents Iron Scope's role to a Carrier, Policyholder, or regulator, or otherwise breaches Section 2, 3, or 14."
+        "text": "This Agreement remains in effect for as long as Client maintains an account or submits requests through the Iron Scope platform. Either party may terminate at any time; termination does not relieve Client of payment obligations for services already rendered. Iron Scope may suspend or terminate Client's account immediately if Client misrepresents Iron Scope's role to a Carrier, Policyholder, or regulator, or otherwise breaches Section 2, 3, or 15."
       },
       {
         "type": "h2",
-        "text": "16. Force Majeure"
+        "text": "17. Force Majeure"
       },
       {
         "type": "p",
@@ -358,7 +374,7 @@
       },
       {
         "type": "h2",
-        "text": "17. Assignment"
+        "text": "18. Assignment"
       },
       {
         "type": "p",
@@ -366,7 +382,7 @@
       },
       {
         "type": "h2",
-        "text": "18. Governing Law and Dispute Resolution"
+        "text": "19. Governing Law and Dispute Resolution"
       },
       {
         "type": "p",
@@ -374,7 +390,7 @@
       },
       {
         "type": "h2",
-        "text": "19. Severability"
+        "text": "20. Severability"
       },
       {
         "type": "p",
@@ -382,7 +398,7 @@
       },
       {
         "type": "h2",
-        "text": "20. Entire Agreement"
+        "text": "21. Entire Agreement"
       },
       {
         "type": "p",
@@ -390,7 +406,7 @@
       },
       {
         "type": "h2",
-        "text": "21. Contact"
+        "text": "22. Contact"
       },
       {
         "type": "p",
