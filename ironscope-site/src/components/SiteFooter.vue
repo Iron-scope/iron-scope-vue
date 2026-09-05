@@ -51,7 +51,7 @@ const columns = [
             <SealMark :size="56" class="text-on-dark" />
             <div>
               <p class="text-[19px] leading-tight font-extrabold tracking-[-0.02em] uppercase">Iron Scope LLC</p>
-              <p class="label mt-2 text-on-dark-muted">Oregon limited liability company</p>
+              <p class="label mt-2 text-on-dark-muted">Oregon limited<br />liability company</p>
             </div>
           </div>
           <p class="mt-6 max-w-sm text-[15px] leading-relaxed text-on-dark-muted">
