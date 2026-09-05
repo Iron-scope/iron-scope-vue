@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed, watch, onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import SealMark from '@/components/SealMark.vue'
 import { useSession } from '@/composables/useSession'
 import { signOut } from '@/lib/auth'
 import { getTierById } from '@/lib/ironcladTiers'

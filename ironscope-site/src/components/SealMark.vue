@@ -20,8 +20,8 @@ const props = defineProps({
 })
 
 const VIEWBOX = {
-  full: '0 0 522 522',
-  glyph: '150 150 222 222',
+  full: '0 0 451 438',
+  glyph: '150 149 150 150',
 }
 
 // Swap the viewBox rather than shipping a second file.
