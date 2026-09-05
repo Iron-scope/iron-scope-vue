@@ -52,7 +52,7 @@ function dismiss() {
       >
         &times;
       </button>
-      <div class="mx-auto">
+      <div class="flex justify-center">
         <Medallion3D :size="84" :spin-seconds="9" />
       </div>
       <p class="label mt-5 text-rust">Limited-Time Offer</p>

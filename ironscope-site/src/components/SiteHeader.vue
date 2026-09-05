@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
         rest of the type system doesn't fork for one label.
       -->
       <RouterLink to="/" class="flex items-center gap-2.5" aria-label="Iron Scope — home">
-        <img src="/ironscope-seal-v3.png" alt="" class="h-9 w-auto" />
+        <img src="/ironscope-seal-v4.png" alt="" class="h-9 w-auto" />
         <span class="text-[20px] leading-none font-bold text-ink">Iron Scope</span>
       </RouterLink>
 

@@ -14,7 +14,7 @@ import { onMounted, onBeforeUnmount, ref } from 'vue'
  * mapping crops away the texture's flat corners.
  */
 const props = defineProps({
-  imageSrc: { type: String, default: '/ironscope-seal-opaque-v3.png' },
+  imageSrc: { type: String, default: '/ironscope-seal-opaque-v4.png' },
   size: { type: Number, default: 140 },
   spinSeconds: { type: Number, default: 9 },
   rimColor: { type: String, default: '#163c5d' },
