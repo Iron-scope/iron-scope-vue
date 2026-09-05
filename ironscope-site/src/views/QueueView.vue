@@ -10,7 +10,7 @@ const STATUS_FLOW = {
   APPROVED: null,
 }
 const NEXT_LABEL = { SUBMITTED: 'Claim', IN_PROGRESS: 'Mark Delivered' }
-const FILTERS = ['ALL', 'SUBMITTED', 'IN_PROGRESS', 'AWAITING_INFO', 'REVISION_REQUESTED', 'DELIVERED', 'APPROVED']
+const FILTERS = ['ALL', 'SUBMITTED', 'IN_PROGRESS', 'AWAITING_INFO', 'REVISION_REQUESTED', 'DELIVERED', 'APPROVED', 'ARCHIVED']
 
 const route = useRoute()
 const requests = ref([])
@@ -21,6 +21,7 @@ const approvedRcv = ref('')
 const approvalProofLink = ref('')
 const approvalError = ref('')
 const ironcladOverridingId = ref(null)
+const archivingId = ref(null)
 
 const depositJustPaid = route.query.deposit === 'paid'
 
@@ -72,7 +73,30 @@ async function confirmApproval(id) {
   load()
 }
 
-const filtered = computed(() => (filter.value === 'ALL' ? requests.value : requests.value.filter((r) => r.status === filter.value)))
+/**
+ * "archived" is a plain flag on the request record (same pattern as the
+ * deactivated flag on user accounts), set through the existing generic
+ * PATCH /api/requests/:id endpoint -- no backend change needed, that route
+ * already merges whatever staff-only fields it's sent. Archived jobs are
+ * hidden from every normal filter (including ALL) so a completed/filed job
+ * stops cluttering the working queue; the dedicated ARCHIVED filter is the
+ * only place they show up.
+ */
+async function setArchived(id, archived) {
+  archivingId.value = id
+  try {
+    await api.patch(`/api/requests/${id}`, { archived, archivedAt: archived ? new Date().toISOString() : null })
+    await load()
+  } finally {
+    archivingId.value = null
+  }
+}
+
+const filtered = computed(() => {
+  if (filter.value === 'ARCHIVED') return requests.value.filter((r) => r.archived)
+  const unarchived = requests.value.filter((r) => !r.archived)
+  return filter.value === 'ALL' ? unarchived : unarchived.filter((r) => r.status === filter.value)
+})
 </script>
 
 <template>
@@ -110,6 +134,9 @@ const filtered = computed(() => (filter.value === 'ALL' ? requests.value : reque
             <p class="label text-muted">{{ r.id }}</p>
             <p class="display-3 mt-1 text-ink">{{ r.companyName }}</p>
             <p v-if="r.internalStatus" class="mt-1 text-[13px] font-semibold text-rust">Internal: {{ r.internalStatus }}</p>
+            <p v-if="r.archived" class="mt-1 text-[13px] font-semibold text-muted">
+              Archived{{ r.archivedAt ? ' ' + new Date(r.archivedAt).toLocaleString() : '' }}
+            </p>
             <dl class="mt-3 space-y-1.5 text-[14px] text-ink-2">
               <div><span class="font-semibold text-ink">Submitted</span> {{ r.createdAt ? new Date(r.createdAt).toLocaleString() : '—' }}</div>
               <div><span class="font-semibold text-ink">Loss</span> {{ r.lossType }} · <span class="font-semibold text-ink">Turnaround</span> {{ r.turnaround }}</div>
@@ -201,6 +228,17 @@ const filtered = computed(() => (filter.value === 'ALL' ? requests.value : reque
 
         <div v-if="r.status === 'DELIVERED' && approvingId !== r.id" class="mt-3">
           <button class="btn btn-outline" @click="startApproval(r.id)">Mark Approved</button>
+        </div>
+
+        <div v-if="r.archived" class="mt-3">
+          <button class="btn btn-outline" :disabled="archivingId === r.id" @click="setArchived(r.id, false)">
+            {{ archivingId === r.id ? 'Working...' : 'Unarchive' }}
+          </button>
+        </div>
+        <div v-else-if="r.status === 'APPROVED'" class="mt-3">
+          <button class="btn btn-outline" :disabled="archivingId === r.id" @click="setArchived(r.id, true)">
+            {{ archivingId === r.id ? 'Archiving...' : 'Archive' }}
+          </button>
         </div>
 
         <div v-if="r.status === 'DELIVERED' && approvingId === r.id" class="mt-5 space-y-3 border-t border-hairline pt-5">
