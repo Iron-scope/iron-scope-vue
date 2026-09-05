@@ -189,7 +189,7 @@ const standards = [
         <p class="label tick text-rust">How it works</p>
         <!-- Kept short on purpose: all-caps display runs long, and this ran to
              six lines before it was cut back. -->
-        <h2 class="display-2 mt-8 text-ink">Priced on the job. Not your settlement.</h2>
+        <h2 class="display-2 mt-8 text-ink">Priced on the approved RCV. Never a contingency.</h2>
       </div>
 
       <div class="lg:col-span-7">
@@ -221,9 +221,9 @@ const standards = [
           <div class="border-t-2 border-rust pt-5">
             <p class="label text-rust">What it does not</p>
             <p class="mt-3 text-[15.5px] leading-relaxed text-ink-2">
-              We hold no interest in your settlement, take no contingency, and
-              are paid whether or not the carrier pays you. Your claim proceeds
-              are yours.
+              We take no contingency and no cut of your margin — paid on the
+              estimate's approved RCV, not on whether or when the carrier
+              releases funds. What you collect from the job is yours.
             </p>
           </div>
         </div>
