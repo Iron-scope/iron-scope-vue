@@ -1,6 +1,7 @@
 <script setup>
 import SiteHeader from '@/components/SiteHeader.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
+import FreeEstimatesPopup from '@/components/FreeEstimatesPopup.vue'
 </script>
 
 <template>
@@ -18,4 +19,5 @@ import SiteFooter from '@/components/SiteFooter.vue'
     </main>
     <SiteFooter />
   </div>
+  <FreeEstimatesPopup />
 </template>
