@@ -1,19 +1,14 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
-import SealMark from '@/components/SealMark.vue'
+import Medallion3D from '@/components/Medallion3D.vue'
 
 /**
  * Port of app/components/FreeEstimatesPopup.js, mounted globally the same
  * way (see App.vue) -- a site-wide promo, not a per-page component. Same
  * 30s delay, same localStorage dismiss key so a visitor who's already
- * closed it doesn't see it again.
- *
- * The original spins a real 3D medallion (Medallion3D.js, three.js) --
- * skipped here in favor of a plain CSS spin on the same flat SealMark
- * already used in the header/footer, rather than pulling in a 3D
- * dependency for a decorative popup. Same seal, same "spinning medallion"
- * flavor, far lighter.
+ * closed it doesn't see it again. Uses the real 3D spinning medallion
+ * (Medallion3D.vue, three.js), matching the original exactly.
  */
 const DISMISS_KEY = 'ironscope_promo_dismissed'
 const SHOW_DELAY_MS = 30000
@@ -57,8 +52,8 @@ function dismiss() {
       >
         &times;
       </button>
-      <div class="mx-auto w-[84px] animate-spin-slow">
-        <SealMark :size="84" class="text-[color:var(--color-seal-ink)]" />
+      <div class="mx-auto">
+        <Medallion3D :size="84" :spin-seconds="9" />
       </div>
       <p class="label mt-5 text-rust">Limited-Time Offer</p>
       <p class="display-3 mt-2 text-ink">Claim your 3 free estimates now!</p>
@@ -71,17 +66,3 @@ function dismiss() {
     </div>
   </div>
 </template>
-
-<style scoped>
-.animate-spin-slow {
-  animation: spin 9s linear infinite;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-</style>
