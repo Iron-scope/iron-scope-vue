@@ -82,6 +82,42 @@ const routes = [
     meta: { title: 'Service Agreement', legalSlug: 'agreement' },
   },
   {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: () => import('@/views/DashboardView.vue'),
+    meta: { title: 'My Requests' },
+  },
+  {
+    path: '/intake',
+    name: 'intake',
+    component: () => import('@/views/IntakeView.vue'),
+    meta: { title: 'Submit a Job' },
+  },
+  {
+    path: '/upgrade',
+    name: 'upgrade',
+    component: () => import('@/views/UpgradeView.vue'),
+    meta: { title: 'Ironclad' },
+  },
+  {
+    path: '/complete-profile',
+    name: 'complete-profile',
+    component: () => import('@/views/CompleteProfileView.vue'),
+    meta: { title: 'Complete Your Profile' },
+  },
+  {
+    path: '/password-reset-required',
+    name: 'password-reset-required',
+    component: () => import('@/views/PasswordResetRequiredView.vue'),
+    meta: { title: 'Password Reset Required' },
+  },
+  {
+    path: '/reset-password',
+    name: 'reset-password',
+    component: () => import('@/views/ResetPasswordView.vue'),
+    meta: { title: 'Set a New Password' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('@/views/NotFoundView.vue'),
