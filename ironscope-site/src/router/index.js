@@ -118,6 +118,24 @@ const routes = [
     meta: { title: 'Set a New Password' },
   },
   {
+    path: '/queue',
+    name: 'queue',
+    component: () => import('@/views/QueueView.vue'),
+    meta: { title: 'Queue' },
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: () => import('@/views/AdminResourcesView.vue'),
+    meta: { title: 'Resources & Training' },
+  },
+  {
+    path: '/admin/users',
+    name: 'admin-users',
+    component: () => import('@/views/AdminUsersView.vue'),
+    meta: { title: 'User Accounts' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('@/views/NotFoundView.vue'),
