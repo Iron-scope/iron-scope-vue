@@ -18,8 +18,21 @@ const loading = ref(false)
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
-const callbackUrl = () =>
-  typeof route.query.callbackUrl === 'string' ? route.query.callbackUrl : '/dashboard'
+/**
+ * Only ever accepts a genuine same-site relative path -- never an absolute
+ * URL or protocol-relative "//host/path". Two reasons: (1) a query param
+ * is attacker-controllable, so blindly trusting it into router.push()
+ * would be an open-redirect; (2) it already broke once in practice --
+ * NextAuth's own redirect-back-to-signin fallback (after the Google flow
+ * failed pre-fix) returned an *absolute* callbackUrl, which without this
+ * guard gets handed straight to router.push() and read as a literal path
+ * segment, producing .../https://iron-scope.com/dashboard.
+ */
+const callbackUrl = () => {
+  const raw = route.query.callbackUrl
+  const isSafeRelativePath = typeof raw === 'string' && raw.startsWith('/') && !raw.startsWith('//') && !raw.includes('://')
+  return isSafeRelativePath ? raw : '/dashboard'
+}
 
 /**
  * Mirrors app/login/page.js in the Next.js app exactly, including the

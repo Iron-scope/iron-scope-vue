@@ -1,22 +1,55 @@
 <script setup>
-import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref, computed, watch, onBeforeUnmount } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import SealMark from '@/components/SealMark.vue'
+import { useSession } from '@/composables/useSession'
+import { signOut } from '@/lib/auth'
+import { getTierById } from '@/lib/ironcladTiers'
 
 /**
+ * Session-aware nav, ported from the real app's components/SiteNav.js --
+ * that file's own comment explains why this matters: "pages always showed
+ * Log In/Sign Up regardless of actual auth state, and there was no Log Out
+ * link anywhere." The anonymous nav below is this app's own (marketing,
+ * anchor-based); the signed-in ones mirror SiteNav.js exactly so a staff
+ * login sees Queue/Resources/Users, not a customer Dashboard link.
+ *
  * `route: true` items are real pages and must render as RouterLink — a plain
  * <a href="/pricing"> would trigger a full document reload. The rest are
  * in-page anchors and stay as <a>.
  */
-const nav = [
+const anonNav = [
   { label: 'Scope of Work', to: '/#scope' },
   { label: 'Large Loss', to: '/#large-loss' },
   { label: 'Standards', to: '/#standards' },
   { label: 'Pricing', to: '/pricing', route: true },
 ]
+const staffNav = [
+  { label: 'Queue', to: '/queue', route: true },
+  { label: 'Resources', to: '/admin', route: true },
+  { label: 'Users', to: '/admin/users', route: true },
+]
+const customerNav = [
+  { label: 'Dashboard', to: '/dashboard', route: true },
+  { label: 'Submit Request', to: '/intake', route: true },
+  { label: 'Subscription', to: '/upgrade', route: true },
+]
+
+const { user, isSignedIn, isStaff, fetchSession } = useSession()
+const nav = computed(() => (isStaff.value ? staffNav : isSignedIn.value ? customerNav : anonNav))
+const ironcladTier = computed(() =>
+  user.value?.subscriptionStatus === 'active' ? getTierById(user.value.ironcladTier) : null
+)
 
 const route = useRoute()
+const router = useRouter()
 const open = ref(false)
+
+async function logOut() {
+  await signOut()
+  await fetchSession()
+  router.push('/')
+}
 
 watch(() => route.fullPath, () => (open.value = false))
 watch(open, (v) => {
@@ -38,6 +71,9 @@ onBeforeUnmount(() => {
       </RouterLink>
 
       <nav class="hidden items-center gap-9 lg:flex" aria-label="Primary">
+        <span v-if="ironcladTier" class="label rounded-full border border-rule px-3 py-1.5 text-ink-2">
+          Ironclad · {{ ironcladTier.name }}
+        </span>
         <component
           v-for="item in nav"
           :key="item.to"
@@ -50,10 +86,17 @@ onBeforeUnmount(() => {
       </nav>
 
       <div class="hidden items-center gap-6 md:flex">
-        <RouterLink to="/login" class="text-[15px] font-medium text-ink-2 hover:text-ink">
-          Log in
-        </RouterLink>
-        <RouterLink to="/register" class="btn btn-signal !py-2.5">Send a file</RouterLink>
+        <template v-if="isSignedIn">
+          <button type="button" class="text-[15px] font-medium text-ink-2 hover:text-ink" @click="logOut">
+            Log out
+          </button>
+        </template>
+        <template v-else>
+          <RouterLink to="/login" class="text-[15px] font-medium text-ink-2 hover:text-ink">
+            Log in
+          </RouterLink>
+          <RouterLink to="/register" class="btn btn-signal !py-2.5">Send a file</RouterLink>
+        </template>
       </div>
 
       <button
@@ -89,8 +132,13 @@ onBeforeUnmount(() => {
           {{ item.label }}
         </component>
         <div class="flex flex-col gap-3 py-5">
-          <RouterLink to="/register" class="btn btn-signal">Send a file</RouterLink>
-          <RouterLink to="/login" class="btn btn-outline">Log in</RouterLink>
+          <template v-if="isSignedIn">
+            <button type="button" class="btn btn-outline" @click="logOut">Log out</button>
+          </template>
+          <template v-else>
+            <RouterLink to="/register" class="btn btn-signal">Send a file</RouterLink>
+            <RouterLink to="/login" class="btn btn-outline">Log in</RouterLink>
+          </template>
         </div>
       </div>
     </nav>

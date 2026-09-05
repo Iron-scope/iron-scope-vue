@@ -33,8 +33,45 @@ export async function signInCredentials(email, password) {
   return { error, url: data.url }
 }
 
-export function signInGoogle(callbackUrl = '/dashboard') {
-  window.location.href = `/api/auth/signin/google?callbackUrl=${encodeURIComponent(callbackUrl)}`
+/**
+ * OAuth providers can't be initiated with a bare GET -- NextAuth's
+ * /api/auth/signin/:provider route requires a POST carrying a valid CSRF
+ * token (the same double-submit check as credentials sign-in), otherwise
+ * it just falls through to re-rendering the configured sign-in page
+ * (pages.signIn: "/login" here) instead of redirecting to Google. This is
+ * exactly what next-auth/react's signIn() does under the hood for OAuth
+ * providers: fetch a CSRF token, then a real <form> POST (not fetch --
+ * the response is a 302 straight to Google, which only a real navigation
+ * follows correctly).
+ *
+ * callbackUrl is resolved to an absolute, same-origin URL before sending
+ * -- next-auth/react does the same. Passing a bare relative path through
+ * unresolved is what caused the /dashboard 404 after a failed Google
+ * attempt: NextAuth's own redirect-back-to-signin fallback returned an
+ * *absolute* callbackUrl, and that string then got passed straight into
+ * router.push() on the next login attempt, which read it as a literal
+ * path (producing .../https://iron-scope.com/dashboard).
+ */
+export async function signInGoogle(callbackUrl = '/dashboard') {
+  const absoluteCallbackUrl = new URL(callbackUrl, window.location.origin).toString()
+
+  const csrfRes = await fetch('/api/auth/csrf', { credentials: 'include' })
+  const { csrfToken } = await csrfRes.json()
+
+  const form = document.createElement('form')
+  form.method = 'POST'
+  form.action = '/api/auth/signin/google'
+
+  for (const [name, value] of Object.entries({ csrfToken, callbackUrl: absoluteCallbackUrl })) {
+    const input = document.createElement('input')
+    input.type = 'hidden'
+    input.name = name
+    input.value = value
+    form.appendChild(input)
+  }
+
+  document.body.appendChild(form)
+  form.submit()
 }
 
 export async function signOut() {
