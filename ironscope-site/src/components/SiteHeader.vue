@@ -29,10 +29,12 @@ const staffNav = [
   { label: 'Resources', to: '/admin', route: true },
   { label: 'Users', to: '/admin/users', route: true },
 ]
+// "Subscription" deliberately omitted while Ironclad is paused -- don't
+// invite new signups. An existing active subscriber still reaches /upgrade
+// via the Ironclad badge's own "Manage plan" link on Dashboard.
 const customerNav = [
   { label: 'Dashboard', to: '/dashboard', route: true },
   { label: 'Submit Request', to: '/intake', route: true },
-  { label: 'Subscription', to: '/upgrade', route: true },
 ]
 
 const { user, isSignedIn, isStaff, fetchSession } = useSession()

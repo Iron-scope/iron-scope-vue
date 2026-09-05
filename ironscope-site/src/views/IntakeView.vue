@@ -225,23 +225,25 @@ async function onSubmit() {
         </div>
       </div>
 
-      <div class="border-t border-hairline pt-6">
-        <label class="flex items-start gap-3 text-[15px]" :class="hasActiveIronclad ? 'text-ink-2' : 'text-muted'">
+      <!--
+        Ironclad is paused (customer-facing): this section only appears for
+        an account that already has an active subscription -- that's their
+        existing entitlement, not new enrollment. Nothing invites someone
+        without one to get Ironclad here anymore.
+      -->
+      <div v-if="hasActiveIronclad" class="border-t border-hairline pt-6">
+        <label class="flex items-start gap-3 text-[15px] text-ink-2">
           <input
             v-model="form.ironcladSupportRequested"
             type="checkbox"
-            :disabled="!hasActiveIronclad"
             class="mt-0.5 h-[18px] w-[18px] accent-[color:var(--color-signal)]"
           />
           Include this job in my Ironclad support (rebuttal help + guaranteed SLA)
         </label>
         <p class="mt-2 text-[13px] text-ink-2">
-          <template v-if="hasActiveIronclad">
-            Counts against your plan's monthly job/RCV limit. Once requested, you can't remove it yourself — you'd
-            need to request a demotion for staff to review. The standard estimate fee above still applies either
-            way.
-          </template>
-          <template v-else>Requires an active Ironclad subscription — see Pricing to subscribe.</template>
+          Counts against your plan's monthly job/RCV limit. Once requested, you can't remove it yourself — you'd
+          need to request a demotion for staff to review. The standard estimate fee above still applies either
+          way.
         </p>
       </div>
 

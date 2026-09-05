@@ -56,6 +56,20 @@ const periodEndDate = computed(() =>
       change tiers as your volume changes.
     </p>
 
+    <!--
+      Ironclad is paused for new/non-subscribers: only someone who already
+      has an active plan sees the real management view below (their tier
+      grid, cancel flow, etc.) -- untouched from before the pause. Everyone
+      else gets a plain "paused" notice instead of tier pricing or a
+      Subscribe/Contact-Us path.
+    -->
+    <div v-if="!isActive" class="mt-10 max-w-2xl border-l-4 border-rust bg-inset px-5 py-4 text-[15px] leading-relaxed text-ink-2">
+      Ironclad enrollment is paused for now. Your base account never requires a subscription — every estimate is
+      still written the same way. Check back later, or <RouterLink to="/contact" class="underline">contact us</RouterLink>
+      with questions.
+    </div>
+
+    <template v-else>
     <div class="mt-8 max-w-2xl border-l-4 border-rust bg-inset px-5 py-4 text-[15px] leading-relaxed text-ink-2">
       <strong class="text-ink">Ironclad is a support subscription, not a jobs package.</strong>
       It doesn't include free or discounted estimates — every job still bills the standard estimate-writing fee
@@ -122,5 +136,6 @@ const periodEndDate = computed(() =>
       Ironclad is optional — your base account never requires a subscription. See
       <RouterLink to="/pricing" class="underline">Pricing</RouterLink> for what's included with every estimate.
     </div>
+    </template>
   </section>
 </template>

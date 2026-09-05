@@ -13,7 +13,6 @@ const loading = ref(true)
 const ironcladUsage = ref(null)
 const actionError = ref('')
 
-const upgradingId = ref(null)
 const payingId = ref(null)
 const requestingSupportId = ref(null)
 const requestingDemotionId = ref(null)
@@ -50,19 +49,6 @@ onMounted(() => {
   load()
   loadUsage()
 })
-
-async function requestIroncladUpgrade(id) {
-  upgradingId.value = id
-  actionError.value = ''
-  try {
-    await api.post(`/api/requests/${id}/upgrade-ironclad`, {})
-    await load()
-  } catch (err) {
-    actionError.value = err.message
-  } finally {
-    upgradingId.value = null
-  }
-}
 
 async function payIroncladFee(id) {
   payingId.value = id
@@ -127,9 +113,6 @@ async function submitApproval(id) {
   }
 }
 
-function canOfferUpgrade(r) {
-  return r.isFreeEstimate && ['DELIVERED', 'REVISION_REQUESTED'].includes(r.status) && !r.ironcladUpgradeRequested
-}
 function canReportApproval(r) {
   return ['DELIVERED', 'REVISION_REQUESTED', 'APPROVED'].includes(r.status) && !r.approvedRcv
 }
@@ -141,17 +124,13 @@ function canReportApproval(r) {
     <h1 class="display-2 mt-4 text-ink">My Requests</h1>
     <p class="lede mt-4 text-ink-2">Everything you've submitted, and where it stands.</p>
 
-    <div v-if="!ironcladUsage" class="mt-8 flex flex-wrap items-center justify-between gap-4 border-l-4 border-rust bg-inset px-5 py-4">
-      <span class="text-[15px] text-ink-2">
-        Want rebuttal support and a guaranteed SLA on your jobs? Ironclad subscriptions start at $99/mo.
-      </span>
-      <div class="flex shrink-0 gap-3">
-        <RouterLink to="/pricing" class="btn btn-outline">View Pricing</RouterLink>
-        <RouterLink to="/upgrade" class="btn btn-outline">Upgrade to Ironclad</RouterLink>
-      </div>
-    </div>
-
-    <div v-else class="mt-8 rounded-card border-2 border-rule bg-carbon p-6 text-on-dark">
+    <!--
+      Ironclad is paused (customer-facing): the non-subscriber upsell that
+      lived here is deliberately gone -- don't invite new enrollment. An
+      existing active subscriber's usage card below is untouched; that's
+      their own account state, not promotion.
+    -->
+    <div v-if="ironcladUsage" class="mt-8 rounded-card border-2 border-rule bg-carbon p-6 text-on-dark">
       <div class="flex items-center justify-between gap-4">
         <span class="label text-signal">Ironclad · {{ ironcladUsage.tier.name }}</span>
         <div class="flex gap-4 text-[12px]">
@@ -192,8 +171,7 @@ function canReportApproval(r) {
     <div v-if="freeRemaining !== null && freeRemaining > 0 && requests.length === 0" class="mt-6 border-l-4 border-rust bg-inset px-5 py-4 text-[15px] leading-relaxed text-ink-2">
       You have <strong>{{ freeRemaining }} free estimate{{ freeRemaining === 1 ? '' : 's' }}</strong> waiting to be
       used — small estimates under $10,000 don't cost anything for your first three. Free estimates are the
-      estimate itself only; revisions and Ironclad-level support aren't included, though you can add Ironclad
-      after the fact if a carrier pushes back.
+      estimate itself only; revisions and additional support aren't included.
     </div>
     <p v-if="actionError" role="alert" class="mt-6 text-[14.5px] font-medium text-rust">{{ actionError }}</p>
 
@@ -247,15 +225,12 @@ function canReportApproval(r) {
             {{ requestingDemotionId === r.id ? 'Requesting...' : 'Request Demotion to Standard' }}
           </button>
 
-          <div v-if="canOfferUpgrade(r)" class="w-full space-y-2">
-            <p class="text-[13px] text-ink-2">
-              Carrier pushing back on this one? Upgrade to Ironclad for a full rebuttal package. You'll only owe
-              the standard estimate fee, based on the final approved value — no deposit required.
-            </p>
-            <button class="btn btn-outline" :disabled="upgradingId === r.id" @click="requestIroncladUpgrade(r.id)">
-              {{ upgradingId === r.id ? 'Requesting...' : 'Upgrade to Ironclad' }}
-            </button>
-          </div>
+          <!-- Ironclad is paused: the per-job "Upgrade to Ironclad" offer that
+               lived here for eligible free-tier jobs is hidden -- don't invite
+               new enrollment. A job that already has an upgrade in flight
+               (requested before the pause) still shows its existing state
+               below, since that's completing something already started, not
+               a new signup. -->
 
           <p v-if="r.ironcladUpgradeRequested && !r.ironcladUpgradeFeeCents" class="text-[13px] text-ink-2">
             Ironclad upgrade requested — the fee will be calculated once your estimate is approved and the final

@@ -55,7 +55,7 @@ export const steps = [
   {
     n: '04',
     title: 'We Stand Behind It',
-    body: 'Revisions and supplement preparation are included if a carrier pushes back. For contractors who want a fully built rebuttal package — standards citations, dollar impact, and documentation ready to present — that’s what the Ironclad tier is for.',
+    body: 'Revisions and supplement preparation are included if a carrier pushes back, so your scope stays defensible without starting over.',
   },
 ]
 
@@ -72,7 +72,7 @@ export const included = [
 ]
 
 export const includedNote =
-  'Free-tier estimates (your first 3, under $10,000) include the estimate itself — revisions and support above aren’t guaranteed on those, though Ironclad can be added afterward if needed.'
+  'Free-tier estimates (your first 3, under $10,000) include the estimate itself — revisions and support above aren’t guaranteed on those.'
 
 export const projectTypes = [
   'Water Damage Restoration',
@@ -118,7 +118,7 @@ export const additionalServices = [
 
 export const pricingSummary = {
   title: 'Pricing',
-  body: 'Sign up free — your first 3 small estimates (under $10,000) don’t cost a thing, so you can see how we write before committing to anything. Free estimates are the estimate itself; if a carrier pushes back, you can add Ironclad support afterward. Pricing beyond the free tier scales with your project’s approved RCV.',
+  body: 'Sign up free — your first 3 small estimates (under $10,000) don’t cost a thing, so you can see how we write before committing to anything. Free estimates are the estimate itself. Pricing beyond the free tier scales with your project’s approved RCV.',
   note: 'Create an account to view current rates and start submitting requests.',
 }
 
@@ -141,7 +141,7 @@ export const requirements = {
   title: 'What We Need From You',
   lede: 'Accurate estimates — delivered on the timelines we commit to — depend on getting complete information up front. Here’s what we ask of every contractor we work with.',
   callout:
-    'Our turnaround commitments, including Ironclad SLAs, start once we’ve received everything below. Incomplete submissions may extend delivery time.',
+    'Our turnaround commitments start once we’ve received everything below. Incomplete submissions may extend delivery time.',
   groups: [
     {
       title: 'Documentation We Need',
