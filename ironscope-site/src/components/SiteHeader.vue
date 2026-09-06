@@ -67,14 +67,13 @@ onBeforeUnmount(() => {
       <!--
         Matches the real site's nav lockup exactly (app/globals.css .brand /
         .brand-logo): the actual raster seal image, not a traced vector, at
-        a comparable height, next to normal-case "Iron Scope" -- not the
-        uppercase treatment this app used previously. Font stays this app's
-        own (Archivo) rather than switching to the old site's Sora, so the
-        rest of the type system doesn't fork for one label.
+        a comparable height, next to uppercase "Iron Scope". Font stays this
+        app's own (Archivo) rather than switching to the old site's Sora, so
+        the rest of the type system doesn't fork for one label.
       -->
       <RouterLink to="/" class="flex items-center gap-2.5" aria-label="Iron Scope — home">
         <img src="/ironscope-seal-v4.png" alt="" class="h-9 w-auto" />
-        <span class="text-[20px] leading-none font-bold text-ink">Iron Scope</span>
+        <span class="text-[20px] leading-none font-bold uppercase tracking-wide text-ink">Iron Scope</span>
       </RouterLink>
 
       <nav class="hidden items-center gap-9 lg:flex" aria-label="Primary">
